@@ -1,51 +1,11 @@
-# G-injector
+# Ventern Boost
 
-This injector is primarily designed for Gorilla Tag but can be used with any Mono-based process.
-It is fully open-source and operates using SMI, an injection library.
-The entire tool is implemented in C# as a console application, ensuring a minimalistic and efficient design.
-
-# Credits
-credits towards the following, these guys made the entire injection library that i used in this and made this possible for me.
-https://github.com/wh0am15533/SharpMonoInjector
-https://github.com/warbler/SharpMonoInjector
+ventern boost is a very simple speedboost mod, just open gorilla tag then open gorilla tag then boom thats about it. in the top left the GUI will appear where you select your velmax.
+it will be hidden on startup after you have already selected your speedboost but you can make it reappear via just clicking F7.
+your speed will save so no need to reapply each time you launch the game
 
 # Tutorial
-1. get your DLL that supported
-2. drag the DLL into GInjector.exe
-3. open your game of choice
-4. injection completed.
-
-# Compatabilty (DEVS)
-to make your dll support all you have to do is add our premade class to your project and tweak it just a tiny bit to target your entry point
-
-https://github.com/Ventern-gtr/G-Injector/blob/master/InjectionTest.dll
-example
-
-```csharp 
-using InjectionTest;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using UnityEngine;
-using UnityEngine.ProBuilder;
-
-namespace Loader
-{
-    public class Loader
-    {
-        public static void Load()
-        {
-            gameObject = new GameObject();
-            gameObject.AddComponent<Plugin>(); // Change this to your entry point e.g (your starting class, initilization class, etc)
-            UnityEngine.Object.DontDestroyOnLoad(gameObject);
-        }
-
-        public static void Unload()
-        {
-            UnityEngine.Object.Destroy(gameObject);
-        }
-
-        public static GameObject gameObject = null;
-    }
-}
-```
+1. open gorilla tag
+2. open injector/exe
+3. wait for beep!
+4. click F7 if menu is hidden
